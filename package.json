@@ -4,6 +4,7 @@
   "description": "validate user inputs using express-validator package",
   "main": "app.ts",
   "scripts": {
+    "start": "tsc --noEmit && tsx app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/M0hamed-Gamall/form-validation/issues"
   },
-  "homepage": "https://github.com/M0hamed-Gamall/form-validation#readme"
+  "homepage": "https://github.com/M0hamed-Gamall/form-validation#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "path": "^0.12.7",
+    "tsx": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
 }
