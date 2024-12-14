@@ -1,55 +1,85 @@
-/* General body styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-/* Form container */
+/* Container for the form */
 form {
-    background-color: #ffffff;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
-/* Input fields styling */
+/* Style for each input field */
 input {
+    margin-bottom: 12px;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    outline: none;
-    transition: border-color 0.3s;
 }
 
 input:focus {
-    border-color: #007BFF;
+    border-color: #4A90E2;
+    outline: none;
 }
 
-/* Placeholder color */
-input::placeholder {
-    color: #aaa;
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-/* Form spacing and alignment */
-form input:last-of-type {
-    margin-bottom: 10px;
+input[type="submit"]:hover {
+    background-color: #357ABD;
 }
 
-/* Responsive design */
-@media (max-width: 500px) {
-    form {
-        padding: 15px;
-    }
+/* Container for error messages */
+#error-container {
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+/* Style for error messages */
+#error-container ul {
+    padding: 0;
+    list-style-type: none;
+    color: #B94A48;
+}
+
+#error-container li {
+    background-color: #F2DEDE;
+    border: 1px solid #EED3D7;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+/* Style for error message text */
+#error-container li {
+    font-size: 14px;
+    font-weight: bold;
 }

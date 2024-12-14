@@ -16,5 +16,15 @@
         <input name="birth-day" placeholder="birth-day">
         <input type="submit">
     </form>
+
+    <div id="error-container">
+        <% if (errors && errors.length > 0) { %>
+            <ul>
+                <% errors.forEach(function(error) { %>
+                    <li><%= error.msg %></li>
+                <% }) %>
+            </ul>
+        <% } %>
+    </div>
 </body>
 </html>
