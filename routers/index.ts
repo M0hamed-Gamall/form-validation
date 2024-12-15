@@ -11,10 +11,15 @@ router.get('/' , (req:Request,res:Response,next:NextFunction)=>{
 router.post('/', validate,(req:Request,res:Response,next:NextFunction)=>{
     const errors = validationResult(req)
     if(!errors.isEmpty()){
-        res.render('home' , {errors : errors.array()});
+        req.flash('errors', errors.array().map((error) => error.msg)); // because this parameter must be string | string[]
+        res.redirect('/message');
     }else{
        res.send("SUCCESSFUL")
     }
+})
+
+router.get('/message' , (req:Request,res:Response,next:NextFunction)=>{
+    res.render('home' , {errors : req.flash('errors')});
 })
 
 export default router;

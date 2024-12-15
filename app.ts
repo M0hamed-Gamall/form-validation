@@ -2,10 +2,21 @@ import express from 'express'
 import dotenv from 'dotenv'
 import router from './routers';
 import path from 'path';
+import flash from 'express-flash';
+import session from 'express-session'
 
 dotenv.config();
 const app = express();
 
+app.use(
+    session({
+      secret: 'your-secret-key',
+      resave: false,
+      saveUninitialized: true,
+    })
+  );
+
+app.use(flash());
 app.use(express.urlencoded({extended : true}))
 app.use(express.json())
 app.set("view engine" , "ejs")
