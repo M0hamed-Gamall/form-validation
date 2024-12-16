@@ -18,13 +18,20 @@
     </form>
 
     <div id="error-container">
-        <% if (errors && errors.length > 0) { %>
+        <% if (flashed.errors.length > 0) { %>
             <ul>
-                <% errors.forEach(function(error) { %>
+                <% flashed.errors.forEach(function(error) { %>
                     <li><%= error %></li>
                 <% }) %>
             </ul>
         <% } %>
-    </div>
+    </div> %>
+
+    <% if (flashed.success.length > 0) { %>
+        <div class="success-message">
+            <li><%= flashed.success %></li>
+        </div>
+    <% } %>
+
 </body>
 </html>

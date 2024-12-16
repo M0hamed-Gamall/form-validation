@@ -4,6 +4,7 @@ import router from './routers';
 import path from 'path';
 import flash from 'express-flash';
 import session from 'express-session'
+import { flashHandler } from './middlewares/flashHandler';
 
 dotenv.config();
 const app = express();
@@ -17,6 +18,8 @@ app.use(
   );
 
 app.use(flash());
+app.use(flashHandler);
+
 app.use(express.urlencoded({extended : true}))
 app.use(express.json())
 app.set("view engine" , "ejs")

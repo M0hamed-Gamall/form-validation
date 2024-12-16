@@ -83,3 +83,15 @@ input[type="submit"]:hover {
     font-size: 14px;
     font-weight: bold;
 }
+
+/* Success Message Styling */
+.success-message {
+    color: #155724;           /* Dark green text color */
+    background-color: #d4edda; /* Light green background */
+    border: 1px solid #c3e6cb; /* Light green border */
+    padding: 10px;             /* Add some spacing inside the box */
+    margin: 10px 0;            /* Add space above and below */
+    border-radius: 5px;        /* Rounded corners */
+    font-family: Arial, sans-serif; /* Clean font */
+    list-style-type: none;     /* Remove bullet points */
+}
